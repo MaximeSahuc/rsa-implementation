@@ -1,9 +1,9 @@
 #info serveur
-N=551
-E=
+N=703
+E=329
 
 #Message
-M=89865
+M=986512476
 
 #Calcul M^E
 Temp=M**E
@@ -11,4 +11,4 @@ Temp=M**E
 #Message chiffré(Reste de la division de Temp par N)
 Message_chiffré = Temp % N
 
-print("Message_chiffré")
+print(Message_chiffré)
