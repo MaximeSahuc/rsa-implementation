@@ -8,6 +8,8 @@
 from utils import (
     rand_prime_in_range,
     pgcd,
+    calc_e,
+    calc_d,
 )
 
 
@@ -27,6 +29,11 @@ def main():
     phi_n = (p - 1) * ( q - 1 )
     print(f"phi(n): {phi_n}")
 
+    e = calc_e(phi_n)
+    print(f"e: {e}")
+
+    d = calc_d(e, phi_n)
+    print(f"d: {d}")
 
 if __name__ == "__main__":
     main()
