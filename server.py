@@ -5,8 +5,27 @@
 #####################
 
 
+from utils import (
+    rand_prime_in_range,
+    pgcd,
+)
+
+
 def main():
     print("---- Server ----")
+    prime_min_range = 10
+    prime_max_range = 40
+
+    p = rand_prime_in_range(_min=prime_min_range, _max=prime_max_range)
+    q = rand_prime_in_range(_min=prime_min_range, _max=prime_max_range)
+    print(f"p: {p}")
+    print(f"q: {q}")
+
+    n = p * q
+    print(f"n: {n}")
+
+    phi_n = (p - 1) * ( q - 1 )
+    print(f"phi(n): {phi_n}")
 
 
 if __name__ == "__main__":
