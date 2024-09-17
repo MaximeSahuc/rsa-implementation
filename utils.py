@@ -32,3 +32,12 @@ def calc_e(phi_n):
 def calc_d(e, phi_n):
     from egcd import egcd
     return egcd(e, phi_n)[1] % phi_n
+
+def exponentiation_modulaire(a, e, n):
+  p=1
+  while e>0:
+    if e % 2 == 1:
+       p = (p*a)%n
+    a=(a*a)%n
+    e=e//2
+  return p
